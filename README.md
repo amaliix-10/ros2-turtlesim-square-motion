@@ -39,29 +39,15 @@ Before running the node, make sure you have:
 
 ### 1. Start turtlesim
 
-Open a terminal and source your ROS 2 environment:
-
-```bash
-source /opt/ros/<ros2_distro>/setup.bash
-```
-
-Then start `turtlesim`:
+Open a terminal then start `turtlesim`:
 
 ```bash
 ros2 run turtlesim turtlesim_node
 ```
 
-Replace `<ros2_distro>` with your installed ROS 2 distribution, such as `humble`, `jazzy`, or another supported version.
-
 ### 2. Run the Publisher Node
 
-Open a **second terminal** and source the ROS 2 environment:
-
-```bash
-source /opt/ros/<ros2_distro>/setup.bash
-```
-
-Then execute the Python script:
+Open a **second terminal** then execute the Python script:
 
 ```bash
 python3 turtle_square.py
@@ -111,6 +97,7 @@ class TurtleSquarePublisher(Node):
 
         self.publisher_.publish(msg)
 ```
+---
 
 ## How It Works
 
@@ -125,11 +112,15 @@ The state alternates between:
 
 The node continuously switches between these two states and publishes the corresponding velocity command.
 
+---
+
 ## Expected Result
 
 When the node is running together with `turtlesim`, the turtle receives alternating forward and rotational velocity commands, producing a repeating square-like movement pattern.
 
-<img width="545" height="512" alt="Screenshot 2026-08-11 114200" src="https://github.com/user-attachments/assets/e71ba6c6-1789-45a9-9790-d82bd89bd884" />
+<img width="507" height="522" alt="Screenshot 2026-08-11 115156" src="https://github.com/user-attachments/assets/3d8aeeba-4bd7-4278-909a-795bc0df9621" />
+
+---
 
 ## Important Note
 
@@ -137,4 +128,4 @@ This implementation demonstrates the **state-machine concept**, but using a fixe
 
 For a more accurate square, the node should keep track of the elapsed time or distance for each side and rotation angle, then stop each movement at the correct point.
 
-[see motion]()
+[see motion](https://drive.google.com/file/d/1OR6a7pPn4VuhW559j8LV1nehIRmwe3Nh/view?usp=drive_link)
