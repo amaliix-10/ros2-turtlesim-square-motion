@@ -1,4 +1,4 @@
-# ros2-turtlesim-square-motion 
+# ROS2-turtlesim-square-motion 
 A simple **ROS 2 Python node** that controls the `turtlesim` turtle to move in a square-shaped path using velocity commands.
 
 ---
